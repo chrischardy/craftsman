@@ -1,0 +1,115 @@
+<html lang='en'>
+<head>
+  <title>Craftsman Espresso</title>
+  <meta charset='utf-8'/>
+  <!-- <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous'> -->
+  <link rel='stylesheet' type='text/css' href='craftsman2.css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'></head>
+
+<body>
+  <!-- Overlay Navigation -->
+  <div class='totes-empty' id='home'></div>
+  <div id='myNav' class='overlay'>
+    <div class='page-header-overlay'>
+      <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>X</a>
+      <img src='img/cm2-logo-1200-cream.png' class='logo-main' alt=''>
+      <span class='empty-span'></span>
+    </div>
+    <div class='overlay-content'>
+      <ul class='nav'>
+        <li class='nav-item'>
+          <a href='#home' onclick='closeNav()'>HOME</a>
+        </li>
+        <li class='nav-item' onclick='closeNav()'>
+          <a href='#about'>ABOUT</a>
+        </li>
+        <li class='nav-item' onclick='closeNav()'>
+          <a href='#map'>LOCATION</a>
+        </li>
+        <li class='nav-item' onclick='closeNav()'>
+          <a href='#contact'>CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Logo and Menu Icon -->
+  <div class='billboard-container'></div>
+  <div id='pageHeader' class='page-header'>
+    <span class='menuicon'  onclick='openNav()'>&#9776;</span>
+    <img src='img/cm2-logo-1200-cream.png' class='logo-main' alt=''>
+    <span class='empty-span'></span>
+  </div>
+  <div class='billboard'>
+    <h1 class='billboard-heading'>Bringing Asheville's legacy of craftsmanship to a movement of espresso and people.</h1>
+  </div>
+  <div class='about callout' id='about'>
+    <div class='about-overlay'>
+      <h2 class='story-header'>About Us</h2>
+      <p class='story'>It requires more than beans and hot water to make the perfect espresso.
+        It involves the process, the experience, and the quality. In a town known for
+        creating hand crafted goods with the highest of quality, we are bringing that
+        culture to the burgeoning local coffee scene.</p>
+
+      <p class='story'> Born out of a desire to bring the hardworking qualities that
+        Asheville is known for to a burgeoning local coffee culture, Craftsman Espresso
+        is here to make your day a little better. Focusing on quality espresso based
+        drinks, we want to break down the barrier of barista and custom.</p>
+    </div>
+  </div>
+  <div class='map' id='map'>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer id='contact' class='callout'>
+    <p class='footer-quote'><em>"Breaking down the barrier between barista and customer through quality, craft, and community."</em></p>
+    <h2 class='footer'>Craftsman Espresso</h2>
+    <p class='footer-location'>Asheville, North Carolina
+      <p>
+  </footer>
+</body>
+
+<script>
+// Initialize and add the map
+function initMap() {
+  // The location of Craftsman
+  var craftsman = {lat: 35.600690, lng: -82.552488};
+  // The map, centered at Craftsman
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 12, center: craftsman});
+  // The marker, positioned at Craftsman
+  var marker = new google.maps.Marker({position: craftsman, map: map});
+}
+
+function openNav() {
+  document.getElementById('myNav').style.width = '100%';
+}
+
+function closeNav() {
+  document.getElementById('myNav').style.width = '0%';
+}
+
+// function scrollUp() {
+//
+//   document.getElementById('pageHeader').style.backgroundColor = 'black';
+// }
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
+    document.getElementById('pageHeader').style.backgroundColor = '#0a2a4c'
+  } else {
+    document.getElementById('pageHeader').style.backgroundColor = 'transparent';
+  }
+}
+
+
+</script>
+<script async defer
+ src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB_EbxhwN7nD73TH-nrYvoWAfZu134K5CM&callback=initMap'>
+ </script>
+</html>
