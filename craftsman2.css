@@ -164,14 +164,14 @@ img.logo-billboard {
 
 
 /* Start Content */
-.callout::before {
-  display: block;
-  height: 150px; /* fixed header height*/
-  margin-top: -150px; /* negative fixed header height */
-  content: " ";
-  visibility: hidden;
-  pointer-events: none;
+
+div.about-offset {
+  padding-top: 150px;
+  margin-top: -150px;
 }
+
+
+
 
 div.about {
   background-image: url(img/barista.jpg);
@@ -181,7 +181,7 @@ div.about {
   min-height: 33vh;
   z-index: 10;
   width: 100vw;
-  padding: 5vh 5vw 3vh 5vw;
+  padding: 7vh 5vw 7vh 5vw;
   color: #e2e3d8;
   display: flex;
 }
