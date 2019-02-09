@@ -181,7 +181,7 @@ div.about {
   min-height: 33vh;
   z-index: 10;
   width: 100vw;
-  padding: 3vh 5vw 3vh 5vw;
+  padding: 5vh 5vw 3vh 5vw;
   color: #e2e3d8;
   display: flex;
 }
@@ -219,11 +219,50 @@ footer {
   color: #e2e3d8;
   font-size: 1em;
   text-align: center;
-  padding: 3vh 10vw 3vh 10vw;
+  padding: 5vh 10vw 5vh 10vw;
 }
 
-footer.footer-quote {
+p.footer-quote {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  color: #e2e3d8;
+  font-size: 2.5rem;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-bottom: 5vh;
+}
 
+h3.footer-header {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+p.footer-location {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+div.social {
+  padding-top: 5vh;
+}
+
+a.social-link {
+  margin: 0 1vw;
+  text-decoration: none;
+}
+
+
+
+a > img.social {
+  width: 2.5vw;
+  min-width: 20px;
+  height: 2.5vw;
+  min-height: 20px;
 }
 
 
