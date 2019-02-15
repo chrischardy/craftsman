@@ -45,7 +45,7 @@
     <h1 class='billboard-heading'>Bringing Asheville's legacy of craftsmanship to a movement of espresso and people.</h1>
   </div>
   <div class='about callout'>
-    <div class='about-offset' id='about'>
+    <div class='offset' id='about'>
     </div>
     <div class='about-overlay'>
       <h2 class='story-header'>About Us</h2>
@@ -60,12 +60,17 @@
         drinks, we desire to break down the barrier of barista and custom.</p>
     </div>
   </div>
-  <div class='map' id='map'>
 
+  <div class='map' id='map-container' >
+
+  </div>
+  <div class='offset' id='map'>
   </div>
 
   <!-- FOOTER -->
-  <footer id='contact' class='callout'>
+  <footer  class='callout'>
+    <div class='offset' id='contact'>
+    </div>
     <p class='footer-quote'><em>"Breaking down the barrier between barista and customer through quality, craft, and community."</em></p>
     <h3 class='footer-header'>Craftsman Espresso</h2>
     <p class='footer-location'>Asheville, North Carolina</p>
@@ -89,7 +94,7 @@ function initMap() {
   var craftsman = {lat: 35.600690, lng: -82.552488};
   // The map, centered at Craftsman
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 12, center: craftsman});
+      document.getElementById('map-container'), {zoom: 12, center: craftsman});
   // The marker, positioned at Craftsman
   var marker = new google.maps.Marker({position: craftsman, map: map});
 }
